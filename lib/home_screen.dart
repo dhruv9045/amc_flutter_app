@@ -62,8 +62,8 @@ class _HomePageState extends State<HomePage>{
               children: <Widget>[
                 Container(
                   child: Padding(
-                    padding: const EdgeInsets.only(top:10),
-                    child: Image.asset('images/img_logo.png',height: 90,),
+                    padding: const EdgeInsets.only( top: 10 ),
+                    child: Image.asset( 'images/img_logo.png', height: 90, ),
                   ),
                 ),
               ],
@@ -77,11 +77,11 @@ class _HomePageState extends State<HomePage>{
             //Gradial View
             Container(
               height: 500,
-              child: Products(),
+              child: Products( ),
             ),
           ],
         ),
-         bottomNavigationBar: BottomNavBar(),
+        bottomNavigationBar: BottomNavBar(),
       ),
     );
   }

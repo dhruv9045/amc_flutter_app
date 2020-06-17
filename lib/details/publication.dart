@@ -1,12 +1,7 @@
 import 'package:amcflutterapp/assets/publication_icon.dart';
 import 'package:amcflutterapp/components/bottom_navigation.dart';
 import 'package:amcflutterapp/components/my_drawer.dart';
-import 'package:amcflutterapp/pdf/bahrain_bankruptcy.dart';
-import 'package:amcflutterapp/pdf/bahrain_company.dart';
-import 'package:amcflutterapp/pdf/bahrain_labour.dart';
-import 'package:amcflutterapp/pdf/company_broucher.dart';
-import 'package:amcflutterapp/pdf/doing_bussiness.dart';
-import 'package:amcflutterapp/pdf/intellectual_property.dart';
+import 'package:amcflutterapp/components/pdf_viewer.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -34,6 +29,7 @@ class _PubState extends State<Pub>{
 
   @override
   Widget build(BuildContext context) {
+
     return Card(
       child:Container(
       child:ListView(
@@ -53,7 +49,7 @@ class _PubState extends State<Pub>{
               child: RaisedButton(
                 color: Colors.white,
                 onPressed: ()=>Navigator.of(context).push(
-                  new MaterialPageRoute(builder: (context)=> new BrochurePdf(),),),
+                  new MaterialPageRoute(builder: (context)=> new PdfViewer(value: 1,title: "Company Brochure"),),),
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
@@ -79,7 +75,7 @@ class _PubState extends State<Pub>{
               child: RaisedButton(
                 color: Colors.white,
                 onPressed: ()=>Navigator.of(context).push(
-                  new MaterialPageRoute(builder: (context)=> new LabourPdf(),),),
+                  new MaterialPageRoute(builder: (context)=> new PdfViewer(value: 2,title: "Bahrain Labour Law"),),),
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
@@ -108,7 +104,7 @@ class _PubState extends State<Pub>{
               child: RaisedButton(
                 color: Colors.white,
                 onPressed: ()=>Navigator.of(context).push(
-                  new MaterialPageRoute(builder: (context)=> new BankruptcyPdf(),),),
+                  new MaterialPageRoute(builder: (context)=> new PdfViewer(value: 3,title: "Bahrain Bankruptcy Law",),),),
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
@@ -137,7 +133,7 @@ class _PubState extends State<Pub>{
               child: RaisedButton(
                 color: Colors.white,
                 onPressed: ()=>Navigator.of(context).push(
-                  new MaterialPageRoute(builder: (context)=> new CompanyPdf(),),),
+                  new MaterialPageRoute(builder: (context)=> new PdfViewer(value: 4,title: "Bahrain Company Law",),),),
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
@@ -166,7 +162,7 @@ class _PubState extends State<Pub>{
               child: RaisedButton(
                 color: Colors.white,
                 onPressed: ()=>Navigator.of(context).push(
-                  new MaterialPageRoute(builder: (context)=> new IntellectualPdf(),),),
+                  new MaterialPageRoute(builder: (context)=> new PdfViewer(value: 5,title: "Intellectual Property Right",),),),
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
@@ -195,7 +191,7 @@ class _PubState extends State<Pub>{
               child: RaisedButton(
                 color: Colors.white,
                 onPressed: ()=>Navigator.of(context).push(
-                  new MaterialPageRoute(builder: (context)=> new DoingPdf(),),),
+                  new MaterialPageRoute(builder: (context)=> new PdfViewer(value: 6,title: "Doing Business in Bahrain"),),),
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
