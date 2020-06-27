@@ -55,7 +55,7 @@ class _HomePageState extends State<HomePage>{
         ),
 
         endDrawer: new MyDrawer(),
-        body: new ListView(
+        body: new Column(
           children: <Widget>[
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -75,8 +75,7 @@ class _HomePageState extends State<HomePage>{
             ),
 
             //Gradial View
-            Container(
-              height: 500,
+            Flexible(
               child: Products( ),
             ),
           ],

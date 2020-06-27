@@ -9,7 +9,6 @@ void main(){
   runApp(
     new MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'GridView Demo',
       home: SplashScreen(),
       routes: <String, WidgetBuilder>{
         SPLASH_SCREEN: (BuildContext context) => SplashScreen(),
