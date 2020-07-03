@@ -5,9 +5,9 @@ AM Consulting(Baharain)
 ©Copyright by MIT
 
 ## Link
--[App Store:-]()
+App Store:-[https://play.google.com/store/apps/details?id=com.amc.consult.amcflutterapp](https://play.google.com/store/apps/details?id=com.amc.consult.amcflutterapp)
 
--[IOS Store:-]()
+IOS Store:-()
 
 ## ScreenShot
 
