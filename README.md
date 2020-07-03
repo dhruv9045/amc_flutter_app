@@ -1,7 +1,9 @@
 # amcflutterapp
 
-A new Flutter application.
+AM Consulting(Baharain)
 
+
+©Copyright by MIT
 ## ScreenShot
 
 ![000](https://user-images.githubusercontent.com/49086525/86271278-3d18d380-bbea-11ea-9605-75863a1c590c.jpeg "splash")
