@@ -20,6 +20,10 @@ class ContactUs extends StatelessWidget {
     );
   }
 }
+
+final colour = HexColor("#365EA1");
+const container_width = 300.0;
+
 class CONTACT extends StatefulWidget {
   @override
   _CONTACTState createState()=>_CONTACTState();
@@ -42,49 +46,21 @@ class _CONTACTState extends State<CONTACT>{
                       "we are here to help. Below is list of services which we provide based "
                       "on the industry you belong to.",style: TextStyle(fontSize: 20,fontFamily: "Antiqua"),textAlign: TextAlign.start,),
                 ),
-                Container(
-                  width: 300,
-                  child: Padding(
-                    padding: const EdgeInsets.fromLTRB(20, 10, 20, 0),
-                    child: RaisedButton(
-                      color: Hexcolor("#365EA1"),
-                      onPressed: ()=>launch("mailto:info@am-consultant.com"),
-                      child: Text("Send us an Email",style: TextStyle(color: Colors.white),),
-                    ),
-                  ),
+                Reusable(
+                  launcher: "mailto:info@am-consultant.com",
+                  texts: "Send us an Email",
                 ),
-                Container(
-                  width: 300,
-                  child: Padding(
-                    padding: const EdgeInsets.fromLTRB(20, 10, 20, 0),
-                    child: RaisedButton(
-                      color: Hexcolor("#365EA1"),
-                      onPressed: ()=>launch("tel://+97333320643"),
-                      child: Text("Call Us",style: TextStyle(color: Colors.white),),
-                    ),
-                  ),
+                Reusable(
+                  launcher: "tel://+97333320643",
+                  texts: "Call Us",
                 ),
-                Container(
-                  width: 300,
-                  child: Padding(
-                    padding: const EdgeInsets.fromLTRB(20, 10, 20, 0),
-                    child: RaisedButton(
-                      color: Hexcolor("#365EA1"),
-                      onPressed: ()=>launch("https://am-consultant.com/blog/"),
-                      child: Text("Visit Our Website",style: TextStyle(color: Colors.white),),
-                    ),
-                  ),
+                Reusable(
+                  launcher: "https://am-consultant.com/blog/",
+                  texts: "Visit Our Website",
                 ),
-                Container(
-                  width: 300,
-                  child: Padding(
-                    padding: const EdgeInsets.fromLTRB(20, 10, 20, 0),
-                    child: RaisedButton(
-                      color: Hexcolor("#365EA1"),
-                      onPressed: ()=>launch("https://goo.gl/maps/Dgpo5boXvwZf4HhR8"),
-                      child: Text("Our Office Location",style: TextStyle(color: Colors.white),),
-                    ),
-                  ),
+                Reusable(
+                  launcher: "https://goo.gl/maps/Dgpo5boXvwZf4HhR8",
+                  texts: "Our Office Location",
                 ),
               ],
             ),
@@ -93,5 +69,25 @@ class _CONTACTState extends State<CONTACT>{
       ),
     );
   }
+}
 
+class Reusable extends StatelessWidget {
+  const Reusable({@required this.launcher,this.texts});
+  final String launcher;
+  final String texts;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: container_width,
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(20, 10, 20, 0),
+        child: RaisedButton(
+          color: colour,
+          onPressed: ()=>launch(launcher),
+          child: Text(texts,style: TextStyle(color: Colors.white),),
+        ),
+      ),
+    );
+  }
 }

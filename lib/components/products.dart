@@ -10,6 +10,7 @@ import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
 class Products extends StatefulWidget {
+
   @override
   _ProductsState createState()=>_ProductsState();
 
@@ -28,7 +29,7 @@ Widget build(BuildContext context) {
           new MaterialPageRoute(builder: (context)=> new AboutUs()),),
         child: new Container(
           child: new Card(
-            color: Hexcolor("#365EA1"),
+            color: HexColor("#365EA1"),
             elevation: 10.0,
             margin: EdgeInsets.all(20.0),
             child:Column(
@@ -36,7 +37,7 @@ Widget build(BuildContext context) {
               children: <Widget>[
                 Container(child: Icon(MyFlutterApp.about_us,color: Colors.white,size: 50,)),
                 Divider(),
-                Container(child: Text("ABOUT US",style: TextStyle(letterSpacing: 1,fontFamily: 'Antiqua',fontWeight: FontWeight.bold,color: Colors.white),textAlign: TextAlign.center,)),
+                Container( child: Text("ABOUT US",style: TextStyle(letterSpacing: 1,fontFamily: 'Antiqua',fontWeight: FontWeight.bold,color: Colors.white),textAlign: TextAlign.center,)),
               ],
             ),
           ),
@@ -47,15 +48,15 @@ Widget build(BuildContext context) {
           new MaterialPageRoute(builder: (context)=> new OurService()),),
         child: new Container(
         child: new Card(
-          color: Hexcolor("#365EA1"),
+          color: HexColor("#365EA1"),
           elevation: 10.0,
           margin: EdgeInsets.all(20.0),
           child:Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Container(child: Icon(MyFlutterApp.our_services,color: Colors.white,size: 50,)),
+              Container( child: Icon(MyFlutterApp.our_services,color: Colors.white,size: 50,)),
               Divider(),
-              Container(child: Text("OUR SERVICES",style: TextStyle(letterSpacing: 1,fontFamily: 'Antiqua',fontWeight: FontWeight.bold,color: Colors.white),textAlign: TextAlign.center,)),
+              Container( child: Text("OUR SERVICES",style: TextStyle(letterSpacing: 1,fontFamily: 'Antiqua',fontWeight: FontWeight.bold,color: Colors.white),textAlign: TextAlign.center,)),
             ],
           ),
         ),
@@ -66,15 +67,15 @@ Widget build(BuildContext context) {
           new MaterialPageRoute(builder: (context)=> new Industries()),),
         child: new Container(
           child: new Card(
-            color: Hexcolor("#365EA1"),
+            color: HexColor("#365EA1"),
             elevation: 10.0,
             margin: EdgeInsets.all(20.0),
             child:Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Container(child: Icon(MyFlutterApp.industries_we_serve,color: Colors.white,size: 50,)),
+                Container( child: Icon(MyFlutterApp.industries_we_serve,color: Colors.white,size: 50,)),
                 Divider(),
-                Container(child: Text("INDUSTRIES WE SERVICES",style: TextStyle(letterSpacing: 1,fontFamily: 'Antiqua',fontWeight: FontWeight.bold,color: Colors.white),textAlign: TextAlign.center,)),
+                Container(child: Text("INDUSTRIES WE SERVICES",style: TextStyle( letterSpacing: 1,fontFamily: 'Antiqua',fontWeight: FontWeight.bold,color: Colors.white),textAlign: TextAlign.center,)),
               ],
             ),
           ),
@@ -86,15 +87,15 @@ Widget build(BuildContext context) {
           new MaterialPageRoute(builder: (context)=> new Publication()),),
         child: new Container(
           child: new Card(
-            color: Hexcolor("#365EA1"),
+            color: HexColor("#365EA1"),
             elevation: 10.0,
             margin: EdgeInsets.all(20.0),
             child:Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Container(child: Icon(MyFlutterApp.publication,color: Colors.white,size: 50,)),
+                Container( child: Icon(MyFlutterApp.publication,color: Colors.white,size: 50,)),
                 Divider(),
-                Container(child: Text("PUBLICATION",style: TextStyle(letterSpacing: 1,fontFamily: 'Antiqua',fontWeight: FontWeight.bold,color: Colors.white),textAlign: TextAlign.center,)),
+                Container( child: Text("PUBLICATION",style: TextStyle(letterSpacing: 1,fontFamily: 'Antiqua',fontWeight: FontWeight.bold,color: Colors.white),textAlign: TextAlign.center,)),
               ],
             ),
           ),
@@ -105,15 +106,15 @@ Widget build(BuildContext context) {
           new MaterialPageRoute(builder: (context)=> new SocialMedia()),),
         child: new Container(
           child: new Card(
-            color: Hexcolor("#365EA1"),
+            color: HexColor("#365EA1"),
             elevation: 10.0,
             margin: EdgeInsets.all(20.0),
             child:Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Container(child: Icon(MyFlutterApp.social_media,color: Colors.white,size: 50,)),
+                Container( child: Icon(MyFlutterApp.social_media,color: Colors.white,size: 50,)),
                 Divider(),
-                Container(child: Text("SOCIAL MEDIA",style: TextStyle(letterSpacing: 1,fontFamily: 'Antiqua',fontWeight: FontWeight.bold,color: Colors.white),textAlign: TextAlign.center,)),
+                Container( child: Text("SOCIAL MEDIA",style: TextStyle(letterSpacing: 1,fontFamily: 'Antiqua',fontWeight: FontWeight.bold,color: Colors.white),textAlign: TextAlign.center,)),
               ],
             ),
           ),
@@ -122,19 +123,17 @@ Widget build(BuildContext context) {
       InkWell(
         onTap: ()=>Navigator.of(context).push(
           new MaterialPageRoute(builder: (context)=> new ContactUs()),),
-        child: new Container(
-          child: new Card(
-            color: Hexcolor("#365EA1"),
-            elevation: 10.0,
-            margin: EdgeInsets.all(20.0),
-            child:Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Container(child: Icon(MyFlutterApp.contact_us,color: Colors.white,size: 50,)),
-                Divider(),
-                Container(child: Text("CONTACT US",style: TextStyle(letterSpacing: 1,fontFamily: 'Antiqua',fontWeight: FontWeight.bold,color: Colors.white),textAlign: TextAlign.center,)),
-              ],
-            ),
+        child: new Card(
+          color: HexColor("#365EA1"),
+          elevation: 10.0,
+          margin: EdgeInsets.all(20.0),
+          child:Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Container( child: Icon(MyFlutterApp.contact_us,color: Colors.white,size: 50,)),
+              Divider(),
+              Container( child: Text("CONTACT US",style: TextStyle(letterSpacing: 1,fontFamily: 'Antiqua',fontWeight: FontWeight.bold,color: Colors.white),textAlign: TextAlign.center,)),
+            ],
           ),
         ),
       ),

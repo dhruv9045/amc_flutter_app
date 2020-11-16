@@ -6,7 +6,6 @@ import 'package:amcflutterapp/details/publication.dart';
 import 'package:amcflutterapp/details/social_media.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
-
 import '../home_screen.dart';
 
 class MyDrawer extends StatelessWidget{
@@ -14,12 +13,13 @@ class MyDrawer extends StatelessWidget{
   Widget build(BuildContext context) {
     return Drawer(
       child: Container(
-        color: Hexcolor("#365EA1"),
+        color: HexColor("#365EA1"),
         child: new ListView(
           children: <Widget>[
 //            body
             InkWell(
-              onTap: ()=>Navigator.of(context).push(
+              onTap: ()=>
+                  Navigator.of(context).push(
                 new MaterialPageRoute(
                     builder: (context)=> new HomePage(),
                 ),
@@ -40,7 +40,7 @@ class MyDrawer extends StatelessWidget{
               thickness: 1,
             ),
 
-            ListTile(onTap:()=>Navigator.of(context).push(
+            ListTile(onTap:()=> Navigator.of(context).push(
               new MaterialPageRoute(builder: (context)=> new HomePage()),) ,
               title: Text('HOME'),
               leading: Icon(Icons.home,color: Colors.white),
@@ -87,7 +87,6 @@ class MyDrawer extends StatelessWidget{
               title: Text('ABOUT US'),
               leading: Icon(Icons.help,color: Colors.white),
             ),
-
           ],
         ),
       ),

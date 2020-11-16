@@ -26,6 +26,7 @@ dependencies:
   hexcolor: ^1.0.2
   url_launcher: ^5.4.10
   flutter_plugin_pdf_viewer: ^1.0.7
+  # auto_size_text: ^2.1.0
 
 dev_dependencies:
   flutter_test:

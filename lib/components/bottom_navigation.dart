@@ -6,13 +6,13 @@ class BottomNavBar extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return BottomAppBar(
-      color: Hexcolor("#365EA1"),
+      color: HexColor("#365EA1"),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.end,
         children: <Widget>[
           IconButton(
             icon: Icon(Icons.home,color: Colors.white),
-            onPressed: ()=>Navigator.of(context).push(
+            onPressed: ()=> Navigator.of(context).push(
               new MaterialPageRoute(builder: (context)=> new HomePage()),),
           ),
           Container(
