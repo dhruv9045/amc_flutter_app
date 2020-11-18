@@ -4,6 +4,7 @@ import 'package:amcflutterapp/components/my_drawer.dart';
 import 'package:amcflutterapp/components/pdf_viewer.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:amcflutterapp/resuable/constraints.dart';
 
 class Publication extends StatelessWidget {
   @override
@@ -47,7 +48,7 @@ class _PubState extends State<Pub> {
                         border: Border.all(),
                       ),
                       child: RaisedButton(
-                        color: Colors.white,
+                        color: whiteColor,
                         onPressed: () => Navigator.of(context).push(
                           new MaterialPageRoute(
                             builder: (context) => new PdfViewer(
@@ -64,7 +65,7 @@ class _PubState extends State<Pub> {
                               ),
                               Text(
                                 "Company Brochure",
-                                style: TextStyle(color: Colors.black),
+                                style: TextStyle(color: blackColor),
                               ),
                             ],
                           ),
@@ -83,7 +84,7 @@ class _PubState extends State<Pub> {
                         border: Border.all(),
                       ),
                       child: RaisedButton(
-                        color: Colors.white,
+                        color: whiteColor,
                         onPressed: () => Navigator.of(context).push(
                           new MaterialPageRoute(
                             builder: (context) => new PdfViewer(
@@ -102,7 +103,7 @@ class _PubState extends State<Pub> {
                                 padding: const EdgeInsets.only(top: 5.0),
                                 child: Text(
                                   "Bahrain Labour Law",
-                                  style: TextStyle(color: Colors.black),
+                                  style: TextStyle(color: blackColor),
                                 ),
                               ),
                             ],
@@ -122,7 +123,7 @@ class _PubState extends State<Pub> {
                         border: Border.all(),
                       ),
                       child: RaisedButton(
-                        color: Colors.white,
+                        color: whiteColor,
                         onPressed: () => Navigator.of(context).push(
                           new MaterialPageRoute(
                             builder: (context) => new PdfViewer(
@@ -143,7 +144,7 @@ class _PubState extends State<Pub> {
                                 padding: const EdgeInsets.only(top: 5.0),
                                 child: Text(
                                   "Bahrain Bankruptcy Law",
-                                  style: TextStyle(color: Colors.black),
+                                  style: TextStyle(color: blackColor),
                                 ),
                               ),
                             ],
@@ -163,7 +164,7 @@ class _PubState extends State<Pub> {
                         border: Border.all(),
                       ),
                       child: RaisedButton(
-                        color: Colors.white,
+                        color: whiteColor,
                         onPressed: () => Navigator.of(context).push(
                           new MaterialPageRoute(
                             builder: (context) => new PdfViewer(
@@ -184,7 +185,7 @@ class _PubState extends State<Pub> {
                                 padding: const EdgeInsets.only(top: 5.0),
                                 child: Text(
                                   "Bahrain Company Law",
-                                  style: TextStyle(color: Colors.black),
+                                  style: TextStyle(color: blackColor),
                                 ),
                               ),
                             ],
@@ -204,7 +205,7 @@ class _PubState extends State<Pub> {
                         border: Border.all(),
                       ),
                       child: RaisedButton(
-                        color: Colors.white,
+                        color: whiteColor,
                         onPressed: () => Navigator.of(context).push(
                           new MaterialPageRoute(
                             builder: (context) => new PdfViewer(
@@ -225,7 +226,7 @@ class _PubState extends State<Pub> {
                                 padding: const EdgeInsets.only(top: 5.0),
                                 child: Text(
                                   "Intellectual Property Right",
-                                  style: TextStyle(color: Colors.black),
+                                  style: TextStyle(color: blackColor),
                                 ),
                               ),
                             ],
@@ -245,7 +246,7 @@ class _PubState extends State<Pub> {
                         border: Border.all(),
                       ),
                       child: RaisedButton(
-                        color: Colors.white,
+                        color: whiteColor,
                         onPressed: () => Navigator.of(context).push(
                           new MaterialPageRoute(
                             builder: (context) => new PdfViewer(
@@ -264,7 +265,7 @@ class _PubState extends State<Pub> {
                                 padding: const EdgeInsets.only(top: 5.0),
                                 child: Text(
                                   "Doing Business in Bahrain",
-                                  style: TextStyle(color: Colors.black),
+                                  style: TextStyle(color: blackColor),
                                 ),
                               ),
                             ],

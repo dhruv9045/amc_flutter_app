@@ -15,11 +15,11 @@ class Reusable extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.fromLTRB(20, 10, 20, 0),
         child: RaisedButton(
-          color: colour,
+          color: appMainColor,
           onPressed: () => launch(launcher),
           child: Text(
             texts,
-            style: TextStyle(color: Colors.white),
+            style: TextStyle(color: whiteColor),
           ),
         ),
       ),

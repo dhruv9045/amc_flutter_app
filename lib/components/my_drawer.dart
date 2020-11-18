@@ -5,92 +5,102 @@ import 'package:amcflutterapp/details/our_services.dart';
 import 'package:amcflutterapp/details/publication.dart';
 import 'package:amcflutterapp/details/social_media.dart';
 import 'package:flutter/material.dart';
-import 'package:hexcolor/hexcolor.dart';
 import '../home_screen.dart';
+import 'package:amcflutterapp/resuable/reusable_drawer.dart';
+import 'package:amcflutterapp/resuable/constraints.dart';
 
-class MyDrawer extends StatelessWidget{
+class MyDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
       child: Container(
-        color: HexColor("#365EA1"),
+        color: appMainColor,
         child: new ListView(
           children: <Widget>[
 //            body
             InkWell(
-              onTap: ()=>
-                  Navigator.of(context).push(
+              onTap: () => Navigator.of(context).push(
                 new MaterialPageRoute(
-                    builder: (context)=> new HomePage(),
+                  builder: (context) => new HomePage(),
                 ),
               ),
-              child:Column(
+              child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   IconButton(
-                    icon: Icon(Icons.close,color: Colors.white),
-                    onPressed: ()=>Navigator.of(context).pop(
-                      new MaterialPageRoute(builder: (context)=> new HomePage()),),
+                    icon: Icon(Icons.close, color: whiteColor),
+                    onPressed: () => Navigator.of(context).pop(
+                      new MaterialPageRoute(
+                          builder: (context) => new HomePage()),
+                    ),
                   ),
                 ],
               ),
             ),
             Divider(
-              color: Colors.white,
+              color: whiteColor,
               thickness: 1,
             ),
 
-            ListTile(onTap:()=> Navigator.of(context).push(
-              new MaterialPageRoute(builder: (context)=> new HomePage()),) ,
-              title: Text('HOME'),
-              leading: Icon(Icons.home,color: Colors.white),
+            ReuseDrawerListTile(
+              label: 'HOME',
+              icon: Icons.home,
+              function: () => Navigator.of(context).push(
+                new MaterialPageRoute(builder: (context) => new HomePage()),
+              ),
             ),
 
-            ListTile(
-              onTap: ()=>Navigator.of(context).push(
-                new MaterialPageRoute(builder: (context)=> new OurService()),),
-              title: Text('OUR SERVICES'),
-              leading: Icon(Icons.airline_seat_recline_normal,color: Colors.white),
+            ReuseDrawerListTile(
+              label: 'OUR SERVICES',
+              icon: Icons.airline_seat_recline_normal,
+              function: () => Navigator.of(context).push(
+                new MaterialPageRoute(builder: (context) => new OurService()),
+              ),
             ),
 
-            ListTile(
-              onTap:()=>Navigator.of(context).push(
-                new MaterialPageRoute(builder: (context)=> new Industries()),),
-              title: Text('INDUSTRIES WE SERVE'),
-              leading: Icon(Icons.find_replace,color: Colors.white),
+            ReuseDrawerListTile(
+              label: 'INDUSTRIES WE SERVE',
+              icon: Icons.find_replace,
+              function: () => Navigator.of(context).push(
+                new MaterialPageRoute(builder: (context) => new Industries()),
+              ),
             ),
 
-            ListTile(
-              onTap: ()=>Navigator.of(context).push(
-                new MaterialPageRoute(builder: (context)=> new Publication()),),
-              title: Text('PUBLICATION'),
-              leading: Icon(Icons.public,color: Colors.white),
+            ReuseDrawerListTile(
+              label: 'PUBLICATION',
+              icon: Icons.public,
+              function: () => Navigator.of(context).push(
+                new MaterialPageRoute(builder: (context) => new Publication()),
+              ),
             ),
 
-            ListTile(
-              onTap:  ()=>Navigator.of(context).push(
-                new MaterialPageRoute(builder: (context)=> new SocialMedia()),),
-              title: Text('SOCIAL MEDIA'),
-              leading: Icon(Icons.perm_media,color: Colors.white),
+            ReuseDrawerListTile(
+              label: 'SOCIAL MEDIA',
+              icon: Icons.perm_media,
+              function: () => Navigator.of(context).push(
+                new MaterialPageRoute(builder: (context) => new SocialMedia()),
+              ),
             ),
 
-            ListTile(
-              onTap:()=>Navigator.of(context).push(
-                new MaterialPageRoute(builder: (context)=> new ContactUs()),) ,
-              title: Text('CONTACT US'),
-              leading: Icon(Icons.phone,color: Colors.white),
+            ReuseDrawerListTile(
+              label: 'CONTACT US',
+              icon: Icons.phone,
+              function: () => Navigator.of(context).push(
+                new MaterialPageRoute(builder: (context) => new ContactUs()),
+              ),
             ),
 
-            ListTile(
-              onTap: ()=>Navigator.of(context).push(
-                new MaterialPageRoute(builder: (context)=> new AboutUs()),),
-              title: Text('ABOUT US'),
-              leading: Icon(Icons.help,color: Colors.white),
+            ReuseDrawerListTile(
+              label: 'ABOUT US',
+              function: () => Navigator.of(context).push(
+                new MaterialPageRoute(builder: (context) => new AboutUs()),
+              ),
+              icon: Icons.help,
             ),
           ],
         ),
       ),
     );
   }
-
 }
+

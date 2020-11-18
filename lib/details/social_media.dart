@@ -3,6 +3,8 @@ import 'package:amcflutterapp/components/my_drawer.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:amcflutterapp/resuable/constraints.dart';
+import 'package:amcflutterapp/resuable/reusable_TableCell.dart';
 
 class SocialMedia extends StatelessWidget {
   @override
@@ -52,116 +54,53 @@ class _SocState extends State<Soc> {
                     child: Column(
                       children: <Widget>[
                         Table(
-                          border: TableBorder.all(color: Colors.black),
+                          border: TableBorder.all(color: blackColor),
                           children: [
                             TableRow(
                               children: [
-                                TableCell(
-                                  child: Center(
-                                    child: Container(
-                                      child: Padding(
-                                        padding: const EdgeInsets.all(20.0),
-                                        child: GestureDetector(
-                                          onTap: _linkedinURL,
-                                          child: Image(
-                                            image: AssetImage(
-                                                'images/linkedin.jpg'),
-                                            height: 50,
-                                            width: 50,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                TableCell(
-                                  child: Center(
-                                    child: Container(
-                                      child: Padding(
-                                        padding: const EdgeInsets.all(20.0),
-                                        child: GestureDetector(
-                                          onTap: _instagramURL,
-                                          child: Image(
-                                            image: AssetImage(
-                                                'images/instagram.png'),
-                                            height: 50,
-                                            width: 50,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ),
+                                ReusableTableCell(
+                                    function: (){
+                                      _linkedinURL();
+                                    },
+                                    image: 'images/linkedin.jpg'),
+                                ReusableTableCell(
+                                    function: (){
+                                      _instagramURL();
+                                    },
+                                    image: 'images/instagram.png'),
                               ],
                             ),
                             TableRow(
                               children: [
-                                TableCell(
-                                  child: Center(
-                                    child: Container(
-                                      child: Padding(
-                                        padding: const EdgeInsets.all(20.0),
-                                        child: GestureDetector(
-                                          onTap: _twitterURL,
-                                          child: Image(
-                                            image: AssetImage(
-                                                'images/twitter.png'),
-                                            height: 50,
-                                            width: 50,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
+                                ReusableTableCell(
+                                    function: (){
+                                      _twitterURL();
+                                    },
+                                    image: 'images/twitter.png'
                                 ),
-                                TableCell(
-                                  child: Center(
-                                    child: Container(
-                                      child: Padding(
-                                        padding: const EdgeInsets.all(20.0),
-                                        child: GestureDetector(
-                                          onTap: _googleBURL,
-                                          child: Image(
-                                            image: AssetImage(
-                                                'images/googlebussiness.png'),
-                                            height: 50,
-                                            width: 50,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ),
+                                ReusableTableCell(
+                                    function: (){
+                                      _googleBURL();
+                                    },
+                                    image: 'images/googlebussiness.png'),
                               ],
                             ),
                           ],
                         ),
                         Table(
                           border: TableBorder(
-                            right: BorderSide(color: Colors.black),
-                            left: BorderSide(color: Colors.black),
-                            bottom: BorderSide(color: Colors.black),
+                            right: BorderSide(color: blackColor),
+                            left: BorderSide(color: blackColor),
+                            bottom: BorderSide(color: blackColor),
                           ),
                           children: [
                             TableRow(
                               children: [
-                                TableCell(
-                                  child: Center(
-                                    child: Container(
-                                      child: Padding(
-                                        padding: const EdgeInsets.all(20.0),
-                                        child: GestureDetector(
-                                          onTap: _blogURL,
-                                          child: Image(
-                                            image:
-                                                AssetImage('images/blog.png'),
-                                            height: 50,
-                                            width: 50,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
+                                ReusableTableCell(
+                                  function: (){
+                                    _blogURL();
+                                  },
+                                  image: 'images/blog.png',
                                 ),
                               ],
                             ),
@@ -179,6 +118,7 @@ class _SocState extends State<Soc> {
     );
   }
 }
+
 
 _googleBURL() async {
   const url = 'https://g.page/AMConsultingBahrain/review?gm';
