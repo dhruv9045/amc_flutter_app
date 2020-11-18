@@ -33,252 +33,121 @@ class _PubState extends State<Pub> {
   @override
   Widget build(BuildContext context) {
     return Container(
-        child: ListView(
-          children: <Widget>[
-            Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: <Widget>[
-                Container(
-                  width: 350,
-                  height: 150,
-                  child: Padding(
-                    padding: const EdgeInsets.fromLTRB(20, 20, 20, 20),
-                    child: Container(
-                      decoration: BoxDecoration(
-                        border: Border.all(),
-                      ),
-                      child: RaisedButton(
-                        color: whiteColor,
-                        onPressed: () => Navigator.of(context).push(
-                          new MaterialPageRoute(
-                            builder: (context) => new PdfViewer(
-                                value: 1, title: "Company Brochure"),
-                          ),
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Column(
-                            children: <Widget>[
-                              Icon(
-                                PublicationIcon.brochure_1,
-                                size: 70,
-                              ),
-                              Text(
-                                "Company Brochure",
-                                style: TextStyle(color: blackColor),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
+      child: ListView(
+        children: <Widget>[
+          Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: <Widget>[
+              ReusePubliContainer(
+                label: 'Company Brochure',
+                icon: PublicationIcon.brochure_1,
+                function: () => Navigator.of(context).push(
+                  new MaterialPageRoute(
+                    builder: (context) =>
+                        new PdfViewer(value: 1, title: "Company Brochure"),
                   ),
                 ),
-                Container(
-                  width: 350,
-                  height: 140,
-                  child: Padding(
-                    padding: const EdgeInsets.fromLTRB(20, 10, 20, 20),
-                    child: Container(
-                      decoration: BoxDecoration(
-                        border: Border.all(),
-                      ),
-                      child: RaisedButton(
-                        color: whiteColor,
-                        onPressed: () => Navigator.of(context).push(
-                          new MaterialPageRoute(
-                            builder: (context) => new PdfViewer(
-                                value: 2, title: "Bahrain Labour Law"),
-                          ),
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Column(
-                            children: <Widget>[
-                              Icon(
-                                PublicationIcon.bahrain_labour_law,
-                                size: 70,
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(top: 5.0),
-                                child: Text(
-                                  "Bahrain Labour Law",
-                                  style: TextStyle(color: blackColor),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
+              ),
+              ReusePubliContainer(
+                label: 'Bahrain Labour Law',
+                icon: PublicationIcon.bahrain_labour_law,
+                function: () => Navigator.of(context).push(
+                  new MaterialPageRoute(
+                    builder: (context) =>
+                        new PdfViewer(value: 2, title: "Bahrain Labour Law"),
                   ),
                 ),
-                Container(
-                  width: 350,
-                  height: 140,
-                  child: Padding(
-                    padding: const EdgeInsets.fromLTRB(20, 10, 20, 20),
-                    child: Container(
-                      decoration: BoxDecoration(
-                        border: Border.all(),
-                      ),
-                      child: RaisedButton(
-                        color: whiteColor,
-                        onPressed: () => Navigator.of(context).push(
-                          new MaterialPageRoute(
-                            builder: (context) => new PdfViewer(
-                              value: 3,
-                              title: "Bahrain Bankruptcy Law",
-                            ),
-                          ),
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Column(
-                            children: <Widget>[
-                              Icon(
-                                PublicationIcon.bankruptcy_law_1,
-                                size: 70,
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(top: 5.0),
-                                child: Text(
-                                  "Bahrain Bankruptcy Law",
-                                  style: TextStyle(color: blackColor),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
+              ),
+              ReusePubliContainer(
+                label: 'Bahrain Bankruptcy Law',
+                icon: PublicationIcon.bankruptcy_law_1,
+                function: () => Navigator.of(context).push(
+                  new MaterialPageRoute(
+                    builder: (context) => new PdfViewer(
+                        value: 3, title: "Bahrain Bankruptcy Law"),
                   ),
                 ),
-                Container(
-                  width: 350,
-                  height: 140,
-                  child: Padding(
-                    padding: const EdgeInsets.fromLTRB(20, 10, 20, 20),
-                    child: Container(
-                      decoration: BoxDecoration(
-                        border: Border.all(),
-                      ),
-                      child: RaisedButton(
-                        color: whiteColor,
-                        onPressed: () => Navigator.of(context).push(
-                          new MaterialPageRoute(
-                            builder: (context) => new PdfViewer(
-                              value: 4,
-                              title: "Bahrain Company Law",
-                            ),
-                          ),
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Column(
-                            children: <Widget>[
-                              Icon(
-                                PublicationIcon.company_law,
-                                size: 70,
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(top: 5.0),
-                                child: Text(
-                                  "Bahrain Company Law",
-                                  style: TextStyle(color: blackColor),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
+              ),
+              ReusePubliContainer(
+                label: 'Bahrain Company Law',
+                icon: PublicationIcon.company_law,
+                function: () => Navigator.of(context).push(
+                  new MaterialPageRoute(
+                    builder: (context) =>
+                        new PdfViewer(value: 4, title: "Bahrain Company Law"),
                   ),
                 ),
-                Container(
-                  width: 350,
-                  height: 140,
-                  child: Padding(
-                    padding: const EdgeInsets.fromLTRB(20, 10, 20, 20),
-                    child: Container(
-                      decoration: BoxDecoration(
-                        border: Border.all(),
-                      ),
-                      child: RaisedButton(
-                        color: whiteColor,
-                        onPressed: () => Navigator.of(context).push(
-                          new MaterialPageRoute(
-                            builder: (context) => new PdfViewer(
-                              value: 5,
-                              title: "Intellectual Property Right",
-                            ),
-                          ),
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Column(
-                            children: <Widget>[
-                              Icon(
-                                PublicationIcon.intellectual_rights_1,
-                                size: 70,
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(top: 5.0),
-                                child: Text(
-                                  "Intellectual Property Right",
-                                  style: TextStyle(color: blackColor),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
+              ),
+              ReusePubliContainer(
+                label: 'Intellectual Property Right',
+                icon: PublicationIcon.intellectual_rights_1,
+                function: () => Navigator.of(context).push(
+                  new MaterialPageRoute(
+                    builder: (context) => new PdfViewer(
+                        value: 5, title: "Intellectual Property Right"),
                   ),
                 ),
-                Container(
-                  width: 350,
-                  height: 140,
-                  child: Padding(
-                    padding: const EdgeInsets.fromLTRB(20, 10, 20, 20),
-                    child: Container(
-                      decoration: BoxDecoration(
-                        border: Border.all(),
-                      ),
-                      child: RaisedButton(
-                        color: whiteColor,
-                        onPressed: () => Navigator.of(context).push(
-                          new MaterialPageRoute(
-                            builder: (context) => new PdfViewer(
-                                value: 6, title: "Doing Business in Bahrain"),
-                          ),
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Column(
-                            children: <Widget>[
-                              Icon(
-                                PublicationIcon.doing_business,
-                                size: 70,
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(top: 5.0),
-                                child: Text(
-                                  "Doing Business in Bahrain",
-                                  style: TextStyle(color: blackColor),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
+              ),
+              ReusePubliContainer(
+                label: 'Doing Business in Bahrain',
+                icon: PublicationIcon.doing_business,
+                function: () => Navigator.of(context).push(
+                  new MaterialPageRoute(
+                    builder: (context) => new PdfViewer(
+                        value: 6, title: "Doing Business in Bahrain"),
                   ),
                 ),
-              ],
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class ReusePubliContainer extends StatelessWidget {
+  const ReusePubliContainer({@required this.label, this.function, this.icon});
+  final String label;
+  final Function function;
+  final IconData icon;
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 350,
+      height: 140,
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(20, 10, 20, 20),
+        child: Container(
+          decoration: BoxDecoration(
+            border: Border.all(),
+          ),
+          child: RaisedButton(
+            color: whiteColor,
+            onPressed: () {
+              function();
+            },
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                children: <Widget>[
+                  Icon(
+                    icon,
+                    size: 70,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 5.0),
+                    child: Text(
+                      label,
+                      style: TextStyle(color: blackColor),
+                    ),
+                  ),
+                ],
+              ),
             ),
-          ],
+          ),
         ),
+      ),
     );
   }
 }
