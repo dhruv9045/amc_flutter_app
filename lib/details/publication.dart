@@ -31,8 +31,7 @@ class Pub extends StatefulWidget {
 class _PubState extends State<Pub> {
   @override
   Widget build(BuildContext context) {
-    return Card(
-      child: Container(
+    return Container(
         child: ListView(
           children: <Widget>[
             Column(
@@ -279,7 +278,6 @@ class _PubState extends State<Pub> {
             ),
           ],
         ),
-      ),
     );
   }
 }
