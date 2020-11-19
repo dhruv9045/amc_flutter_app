@@ -1,7 +1,7 @@
+import 'package:amcflutterapp/assets/constraints.dart';
 import 'package:flutter/material.dart';
-import '../constants.dart';
 import 'package:amcflutterapp/resuable/reusable_drawer.dart';
-import 'file:///D:/TrueLancer/AMC%20Flutter%20design/amc_flutter_app/lib/assets/constraints.dart';
+import '../constants.dart';
 
 class MyDrawer extends StatelessWidget {
   @override
@@ -12,13 +12,16 @@ class MyDrawer extends StatelessWidget {
         child: new ListView(
           children: <Widget>[
             InkWell(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+              child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.baseline,
                 children: <Widget>[
                   IconButton(
                     icon: Icon(Icons.close, color: whiteColor),
                     onPressed: () => Navigator.pop(context),
                   ),
+                  Text(sVersion,
+                    style: TextStyle(color: versionColor),),
                 ],
               ),
             ),

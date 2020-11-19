@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 const container_width = 300.0;
+const versionColor = Color(0xFF8D8E98);
 const appMainColor = Color(0xFF365EA1);
 const blackColor = Color(0xFF111111);
 const whiteColor = Color(0xFFFFFFFF);
@@ -12,6 +13,7 @@ const fProductStyle = TextStyle(
     fontWeight: FontWeight.bold,
     color: whiteColor);
 
+const String sVersion = 'Version: 1.0.1';
 const String sHome = 'HOME';
 const String sAboutUs = 'ABOUT US';
 const String sIndustries = 'INDUSTRIES WE SERVICES';
