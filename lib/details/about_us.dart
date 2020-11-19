@@ -11,7 +11,11 @@ class AboutUs extends StatelessWidget {
       appBar: new AppBar(
         backgroundColor: Colors.blue[900],
         title: new Center(
-            child: new Text('About Us', textAlign: TextAlign.center)),
+          child: new Text(
+            'About Us',
+            textAlign: TextAlign.center,
+          ),
+        ),
         automaticallyImplyLeading: true,
       ),
       endDrawer: MyDrawer(),

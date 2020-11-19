@@ -1,6 +1,6 @@
-import 'package:amcflutterapp/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:amcflutterapp/resuable/constraints.dart';
+import '../constants.dart';
 
 class BottomNavBar extends StatelessWidget{
   @override
@@ -12,9 +12,7 @@ class BottomNavBar extends StatelessWidget{
         children: <Widget>[
           IconButton(
             icon: Icon(Icons.home,color: whiteColor),
-            onPressed: ()=> Navigator.of(context).push(
-              new MaterialPageRoute(builder: (context)=> new HomePage()),),
-          ),
+            onPressed: ()=> Navigator.pushReplacementNamed(context, homeScreen)),
           Container(
             height: 40.0,
           ),

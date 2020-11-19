@@ -25,12 +25,8 @@ class Industries extends StatelessWidget {
   }
 }
 
-class Indu extends StatefulWidget {
-  @override
-  _InduState createState() => _InduState();
-}
 
-class _InduState extends State<Indu> {
+class Indu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(

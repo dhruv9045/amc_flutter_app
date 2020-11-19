@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'loaders/color_loader_3.dart';
-
+import 'package:flutter/services.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -23,7 +23,7 @@ class SplashScreenState extends State<SplashScreen>
   }
 
   void navigationPage() {
-    Navigator.of(context).pushReplacementNamed(HOME_SCREEN);
+    Navigator.of(context).pushReplacementNamed(homeScreen);
   }
 
   @override
@@ -35,12 +35,16 @@ class SplashScreenState extends State<SplashScreen>
   @override
   void initState() {
     super.initState();
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitDown,
+      DeviceOrientation.portraitUp,
+    ]);
     animationController = new AnimationController(
       vsync: this,
       duration: new Duration(seconds: 5),
     );
     animation =
-    new CurvedAnimation(parent: animationController, curve: Curves.easeOut);
+        new CurvedAnimation(parent: animationController, curve: Curves.easeOut);
 
     animation.addListener(() => this.setState(() {}));
     animationController.forward();
@@ -54,7 +58,7 @@ class SplashScreenState extends State<SplashScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-     body: new Stack(
+      body: new Stack(
         fit: StackFit.expand,
         children: <Widget>[
           Column(
@@ -67,11 +71,10 @@ class SplashScreenState extends State<SplashScreen>
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Center(
-
-                            child: Image(
-                          image: AssetImage('images/logo.png'),
-                          height: 150,
-                        ),
+                          child: Image(
+                            image: AssetImage('images/logo.png'),
+                            height: 150,
+                          ),
                         ),
                       ],
                     ),

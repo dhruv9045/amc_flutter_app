@@ -14,7 +14,8 @@ class SocialMedia extends StatelessWidget {
       appBar: new AppBar(
         backgroundColor: Colors.blue[900],
         title: new Center(
-            child: new Text('Social Media', textAlign: TextAlign.center)),
+          child: new Text('Social Media', textAlign: TextAlign.center),
+        ),
         automaticallyImplyLeading: true,
       ),
       body: Soc(),
@@ -24,92 +25,90 @@ class SocialMedia extends StatelessWidget {
   }
 }
 
-class Soc extends StatefulWidget {
-  @override
-  _SocState createState() => _SocState();
-}
-
-class _SocState extends State<Soc> {
+class Soc extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          Container(
-            child: Padding(
-              padding: const EdgeInsets.all(15.0),
-              child: Text(
-                "To visit our social media sites please click below on our pages",
-                style: TextStyle(fontSize: 20, fontFamily: "Antiqua"),
-              ),
-            ),
-          ),
+      child: ListView(
+        children: [
           Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Center(
-                child: Container(
-                  child: Padding(
-                    padding: const EdgeInsets.fromLTRB(40, 10, 40, 10),
-                    child: Column(
-                      children: <Widget>[
-                        Table(
-                          border: TableBorder.all(color: blackColor),
-                          children: [
-                            TableRow(
-                              children: [
-                                ReusableTableCell(
-                                    function: (){
-                                      _linkedinURL();
-                                    },
-                                    image: 'images/linkedin.jpg'),
-                                ReusableTableCell(
-                                    function: (){
-                                      _instagramURL();
-                                    },
-                                    image: 'images/instagram.png'),
-                              ],
-                            ),
-                            TableRow(
-                              children: [
-                                ReusableTableCell(
-                                    function: (){
-                                      _twitterURL();
-                                    },
-                                    image: 'images/twitter.png'
-                                ),
-                                ReusableTableCell(
-                                    function: (){
-                                      _googleBURL();
-                                    },
-                                    image: 'images/googlebussiness.png'),
-                              ],
-                            ),
-                          ],
-                        ),
-                        Table(
-                          border: TableBorder(
-                            right: BorderSide(color: blackColor),
-                            left: BorderSide(color: blackColor),
-                            bottom: BorderSide(color: blackColor),
-                          ),
-                          children: [
-                            TableRow(
-                              children: [
-                                ReusableTableCell(
-                                  function: (){
-                                    _blogURL();
-                                  },
-                                  image: 'images/blog.png',
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
+              Container(
+                child: Padding(
+                  padding: const EdgeInsets.all(15.0),
+                  child: Text(
+                    "To visit our social media sites please click below on our pages",
+                    style: TextStyle(fontSize: 20, fontFamily: "Antiqua"),
                   ),
                 ),
+              ),
+              Column(
+                children: <Widget>[
+                  Center(
+                    child: Container(
+                      child: Padding(
+                        padding: const EdgeInsets.fromLTRB(40, 10, 40, 10),
+                        child: Column(
+                          children: <Widget>[
+                            Table(
+                              border: TableBorder.all(color: blackColor),
+                              children: [
+                                TableRow(
+                                  children: [
+                                    ReusableTableCell(
+                                        function: () {
+                                          _linkedinURL();
+                                        },
+                                        image: 'images/linkedin.jpg'),
+                                    ReusableTableCell(
+                                        function: () {
+                                          _instagramURL();
+                                        },
+                                        image: 'images/instagram.png'),
+                                  ],
+                                ),
+                                TableRow(
+                                  children: [
+                                    ReusableTableCell(
+                                        function: () {
+                                          _twitterURL();
+                                        },
+                                        image: 'images/twitter.png'),
+                                    ReusableTableCell(
+                                        function: () {
+                                          _googleBURL();
+                                        },
+                                        image: 'images/googlebussiness.png'),
+                                  ],
+                                ),
+                              ],
+                            ),
+                            Table(
+                              border: TableBorder(
+                                right: BorderSide(color: blackColor),
+                                left: BorderSide(color: blackColor),
+                                bottom: BorderSide(color: blackColor),
+                              ),
+                              children: [
+                                TableRow(
+                                  children: [
+                                    ReusableTableCell(
+                                      function: () {
+                                        _blogURL();
+                                      },
+                                      image: 'images/blog.png',
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ],
           ),
@@ -118,7 +117,6 @@ class _SocState extends State<Soc> {
     );
   }
 }
-
 
 _googleBURL() async {
   const url = 'https://g.page/AMConsultingBahrain/review?gm';

@@ -1,12 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-// my package
 import 'package:amcflutterapp/components/products.dart';
 import 'components/bottom_navigation.dart';
 import 'components/my_drawer.dart';
+import 'package:flutter/services.dart';
 
-
-class BasicTable extends StatelessWidget {
+class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -14,56 +13,79 @@ class BasicTable extends StatelessWidget {
     );
   }
 }
-class HomePage extends StatefulWidget{
+
+class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage>{
+class _HomePageState extends State<HomePage> {
+  /*@override
+  void initState(){
+    super.initState();
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
+  }
+
+  @override
+  dispose(){
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.landscapeRight,
+      DeviceOrientation.landscapeLeft,
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
+    super.dispose();
+  }*/
 
   @override
   Widget build(BuildContext context) {
-
     Future<bool> _onWillPop() async {
       return (await showDialog(
-        context: context,
-        builder: (context) => new AlertDialog(
-          title: new Text('Are you sure?'),
-          content: new Text('Do you want to exit an App'),
-          actions: <Widget>[
-            new FlatButton(
-              onPressed: () => Navigator.of(context).pop(false),
-              child: new Text('No'),
+            context: context,
+            builder: (context) => new AlertDialog(
+              title: new Text('Are you sure?'),
+              content: new Text('Do you want to exit an App'),
+              actions: <Widget>[
+                new FlatButton(
+                  onPressed: () => Navigator.of(context).pop(false),
+                  child: new Text('No'),
+                ),
+                new FlatButton(
+                  onPressed: () => Navigator.of(context).pop(true),
+                  child: new Text('Yes'),
+                ),
+              ],
             ),
-            new FlatButton(
-              onPressed: () => Navigator.of(context).pop(true),
-              child: new Text('Yes'),
-            ),
-          ],
-        ),
-      )) ?? false;
+          )) ??
+          false;
     }
+
     return new WillPopScope(
       onWillPop: _onWillPop,
       child: new Scaffold(
-
         primary: true,
         appBar: new AppBar(
           backgroundColor: Colors.blue[900],
-          title: new Center(child: new Text('HOME', textAlign: TextAlign.center)),
+          title:
+              new Center(child: new Text('HOME', textAlign: TextAlign.center)),
           automaticallyImplyLeading: false,
         ),
-
         endDrawer: new MyDrawer(),
         body: new Column(
           children: <Widget>[
-            Column(
+            Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Container(
                   child: Padding(
-                    padding: const EdgeInsets.only( top: 10 ),
-                    child: Image.asset( 'images/img_logo.png', height: 90, ),
+                    padding: const EdgeInsets.only(top: 10),
+                    child: Image.asset(
+                      'images/img_logo.png',
+                      height: 90,
+                    ),
                   ),
                 ),
               ],
@@ -76,7 +98,7 @@ class _HomePageState extends State<HomePage>{
 
             //Gradial View
             Flexible(
-              child: Products( ),
+              child: Products(),
             ),
           ],
         ),

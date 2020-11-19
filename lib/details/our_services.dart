@@ -23,12 +23,8 @@ class OurService extends StatelessWidget {
   }
 }
 
-class Our extends StatefulWidget {
-  @override
-  _OurState createState() => _OurState();
-}
+class Our extends StatelessWidget {
 
-class _OurState extends State<Our> {
   @override
   Widget build(BuildContext context) {
     return Container(

@@ -1,20 +1,11 @@
 import 'package:amcflutterapp/assets/my_custon_icons.dart';
-import 'package:amcflutterapp/details/about_us.dart';
-import 'package:amcflutterapp/details/contact_us.dart';
-import 'package:amcflutterapp/details/industries_we_serve.dart';
-import 'package:amcflutterapp/details/our_services.dart';
-import 'package:amcflutterapp/details/publication.dart';
-import 'package:amcflutterapp/details/social_media.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:amcflutterapp/resuable/reusable_Product.dart';
+import '../constants.dart';
 
-class Products extends StatefulWidget {
-  @override
-  _ProductsState createState() => _ProductsState();
-}
+class Products extends StatelessWidget {
 
-class _ProductsState extends State<Products> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,46 +16,34 @@ class _ProductsState extends State<Products> {
         mainAxisSpacing: 0,
         children: <Widget>[
           ReuseProductInkwell(
-            function: () => Navigator.of(context).push(
-              new MaterialPageRoute(builder: (context) => new AboutUs()),
-            ),
+            function: () => Navigator.pushNamed(context, aboutUs),
             icon: MyFlutterApp.about_us,
             label: 'ABOUT US',
           ),
           ReuseProductInkwell(
-            function: () => Navigator.of(context).push(
-              new MaterialPageRoute(builder: (context) => new OurService()),
-            ),
+            function: () => Navigator.pushNamed(context, ourServices),
             icon: MyFlutterApp.our_services,
             label: 'OUR SERVICES',
           ),
           ReuseProductInkwell(
             icon: MyFlutterApp.industries_we_serve,
             label: 'INDUSTRIES WE SERVICES',
-            function: () => Navigator.of(context).push(
-              new MaterialPageRoute(builder: (context) => new Industries()),
-            ),
+            function: () => Navigator.pushNamed(context, industriesWeServe),
           ),
           ReuseProductInkwell(
             icon: MyFlutterApp.publication,
             label: 'PUBLICATION',
-            function: () => Navigator.of(context).push(
-              new MaterialPageRoute(builder: (context) => new Publication()),
-            ),
+            function: () => Navigator.pushNamed(context, publication),
           ),
           ReuseProductInkwell(
             icon: MyFlutterApp.social_media,
             label: 'SOCIAL MEDIA',
-            function: () => Navigator.of(context).push(
-              new MaterialPageRoute(builder: (context) => new SocialMedia()),
-            ),
+            function: () => Navigator.pushNamed(context, socialMedia),
           ),
           ReuseProductInkwell(
             icon: MyFlutterApp.contact_us,
             label: 'CONTACT US',
-            function: () => Navigator.of(context).push(
-              new MaterialPageRoute(builder: (context) => new ContactUs()),
-            ),
+            function: () => Navigator.pushNamed(context, contactUs),
           ),
         ],
       ),
