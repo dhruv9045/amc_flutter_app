@@ -1,6 +1,7 @@
 import 'package:amcflutterapp/assets/our_servicer_icon.dart';
 import 'package:amcflutterapp/components/bottom_navigation.dart';
 import 'package:amcflutterapp/components/my_drawer.dart';
+import 'file:///D:/TrueLancer/AMC%20Flutter%20design/amc_flutter_app/lib/assets/constraints.dart';
 import 'package:flutter/material.dart';
 import 'package:amcflutterapp/resuable/reusable_ExpensionTile.dart';
 
@@ -13,7 +14,7 @@ class OurService extends StatelessWidget {
       appBar: new AppBar(
         backgroundColor: Colors.blue[900],
         title: new Center(
-            child: new Text('Our Services', textAlign: TextAlign.center)),
+            child: new Text(sOurSer, textAlign: TextAlign.center)),
         automaticallyImplyLeading: true,
       ),
       body: Our(),

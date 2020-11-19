@@ -1,11 +1,11 @@
 import 'package:amcflutterapp/assets/my_custon_icons.dart';
+import 'file:///D:/TrueLancer/AMC%20Flutter%20design/amc_flutter_app/lib/assets/constraints.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:amcflutterapp/resuable/reusable_Product.dart';
 import '../constants.dart';
 
 class Products extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,31 +18,31 @@ class Products extends StatelessWidget {
           ReuseProductInkwell(
             function: () => Navigator.pushNamed(context, aboutUs),
             icon: MyFlutterApp.about_us,
-            label: 'ABOUT US',
+            label: sAboutUs,
           ),
           ReuseProductInkwell(
             function: () => Navigator.pushNamed(context, ourServices),
             icon: MyFlutterApp.our_services,
-            label: 'OUR SERVICES',
+            label: sOurSer,
           ),
           ReuseProductInkwell(
             icon: MyFlutterApp.industries_we_serve,
-            label: 'INDUSTRIES WE SERVICES',
+            label: sIndustries,
             function: () => Navigator.pushNamed(context, industriesWeServe),
           ),
           ReuseProductInkwell(
             icon: MyFlutterApp.publication,
-            label: 'PUBLICATION',
+            label: sPublication,
             function: () => Navigator.pushNamed(context, publication),
           ),
           ReuseProductInkwell(
             icon: MyFlutterApp.social_media,
-            label: 'SOCIAL MEDIA',
+            label: sSocial,
             function: () => Navigator.pushNamed(context, socialMedia),
           ),
           ReuseProductInkwell(
             icon: MyFlutterApp.contact_us,
-            label: 'CONTACT US',
+            label: sCon,
             function: () => Navigator.pushNamed(context, contactUs),
           ),
         ],
@@ -50,4 +50,3 @@ class Products extends StatelessWidget {
     );
   }
 }
-

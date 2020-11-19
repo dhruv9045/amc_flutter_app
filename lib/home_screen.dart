@@ -1,9 +1,10 @@
+import 'package:amcflutterapp/assets/constraints.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:amcflutterapp/components/products.dart';
 import 'components/bottom_navigation.dart';
 import 'components/my_drawer.dart';
-import 'package:flutter/services.dart';
+// import 'package:flutter/services.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -70,7 +71,7 @@ class _HomePageState extends State<HomePage> {
         appBar: new AppBar(
           backgroundColor: Colors.blue[900],
           title:
-              new Center(child: new Text('HOME', textAlign: TextAlign.center)),
+              new Center(child: new Text(sHome, textAlign: TextAlign.center)),
           automaticallyImplyLeading: false,
         ),
         endDrawer: new MyDrawer(),

@@ -3,7 +3,7 @@ import 'package:amcflutterapp/components/my_drawer.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:amcflutterapp/resuable/constraints.dart';
+import 'file:///D:/TrueLancer/AMC%20Flutter%20design/amc_flutter_app/lib/assets/constraints.dart';
 import 'package:amcflutterapp/resuable/reusable_TableCell.dart';
 
 class SocialMedia extends StatelessWidget {
@@ -14,7 +14,7 @@ class SocialMedia extends StatelessWidget {
       appBar: new AppBar(
         backgroundColor: Colors.blue[900],
         title: new Center(
-          child: new Text('Social Media', textAlign: TextAlign.center),
+          child: new Text(sSocial, textAlign: TextAlign.center),
         ),
         automaticallyImplyLeading: true,
       ),

@@ -3,7 +3,7 @@ import 'package:amcflutterapp/components/bottom_navigation.dart';
 import 'package:amcflutterapp/components/my_drawer.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:amcflutterapp/resuable/constraints.dart';
+import 'file:///D:/TrueLancer/AMC%20Flutter%20design/amc_flutter_app/lib/assets/constraints.dart';
 import 'package:amcflutterapp/resuable/reusable_ExpensionTile.dart';
 
 class Industries extends StatelessWidget {
@@ -14,7 +14,7 @@ class Industries extends StatelessWidget {
       appBar: new AppBar(
         backgroundColor: Colors.blue[900],
         title: new Center(
-            child: new Text('Industries We Services',
+            child: new Text(sIndustries,
                 textAlign: TextAlign.center)),
         automaticallyImplyLeading: true,
       ),
@@ -91,7 +91,7 @@ class Indu extends StatelessWidget {
                   color: blackColor,
                   size: 30,
                 ),
-                title: Text("Manufacturing"),
+                title: Text('Manufacturing'),
                 children: <Widget>[
                   Icon(
                     IndustriesWeServe.manufacturing,
@@ -124,7 +124,7 @@ class Indu extends StatelessWidget {
                   color: blackColor,
                   size: 30,
                 ),
-                title: Text("Travel & Entertainment"),
+                title: Text('Travel & Entertainment'),
                 children: <Widget>[
                   Icon(
                     IndustriesWeServe.travel_entertainment,
@@ -156,7 +156,7 @@ class Indu extends StatelessWidget {
                   color: blackColor,
                   size: 30,
                 ),
-                title: Text("Supermarket"),
+                title: Text('Supermarket'),
                 children: <Widget>[
                   Padding(
                     padding: const EdgeInsets.only(right: 30),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'constraints.dart';
+import '../assets/constraints.dart';
 
 class Reusable extends StatelessWidget {
   const Reusable({@required this.launcher, this.texts});

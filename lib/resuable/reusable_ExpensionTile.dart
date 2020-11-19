@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'constraints.dart';
-
+import '../assets/constraints.dart';
 
 class ExpandTileReuse extends StatelessWidget {
   const ExpandTileReuse({@required this.label, this.content, this.icon});
@@ -10,20 +9,23 @@ class ExpandTileReuse extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ExpansionTile(
-      leading: Icon(icon,
+      leading: Icon(
+        icon,
         color: blackColor,
         size: leadingIconSize,
       ),
       title: Text(label),
       children: <Widget>[
-        Icon(icon,
+        Icon(
+          icon,
           color: blackColor,
           size: 60,
         ),
         Container(
           child: Padding(
             padding: EdgeInsets.all(15.0),
-            child: Text(content,
+            child: Text(
+              content,
               style: TextStyle(fontSize: 15),
             ),
           ),

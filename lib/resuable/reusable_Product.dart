@@ -1,4 +1,4 @@
-import 'constraints.dart';
+import '../assets/constraints.dart';
 import 'package:flutter/material.dart';
 
 class ReuseProductInkwell extends StatelessWidget {
@@ -26,17 +26,14 @@ class ReuseProductInkwell extends StatelessWidget {
                     color: whiteColor,
                     size: 50,
                   )),
-              Divider(),
-              Container(
-                  child: Text(
-                    label,
-                    style: TextStyle(
-                        letterSpacing: 1,
-                        fontFamily: 'Antiqua',
-                        fontWeight: FontWeight.bold,
-                        color: whiteColor),
-                    textAlign: TextAlign.center,
-                  )),
+              SizedBox(
+                height: 10.0,
+              ),
+              Text(
+                label,
+                style: fProductStyle,
+                textAlign: TextAlign.center,
+              ),
             ],
           ),
         ),

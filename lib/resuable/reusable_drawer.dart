@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'constraints.dart';
+import '../assets/constraints.dart';
 
 class ReuseDrawerListTile extends StatelessWidget {
   const ReuseDrawerListTile({@required this.label, this.function, this.icon});

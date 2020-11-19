@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../constants.dart';
 import 'package:amcflutterapp/resuable/reusable_drawer.dart';
-import 'package:amcflutterapp/resuable/constraints.dart';
+import 'file:///D:/TrueLancer/AMC%20Flutter%20design/amc_flutter_app/lib/assets/constraints.dart';
 
 class MyDrawer extends StatelessWidget {
   @override
@@ -27,38 +27,38 @@ class MyDrawer extends StatelessWidget {
               thickness: 1,
             ),
             ReuseDrawerListTile(
-              label: 'HOME',
+              label: sHome,
               icon: Icons.home,
               function: () =>
                   Navigator.pushReplacementNamed(context, homeScreen),
             ),
             ReuseDrawerListTile(
-              label: 'OUR SERVICES',
+              label: sOurSer,
               icon: Icons.airline_seat_recline_normal,
               function: () => Navigator.popAndPushNamed(context, ourServices),
             ),
             ReuseDrawerListTile(
-              label: 'INDUSTRIES WE SERVE',
+              label: sIndustries,
               icon: Icons.find_replace,
               function: () => Navigator.popAndPushNamed(context, industriesWeServe),
             ),
             ReuseDrawerListTile(
-              label: 'PUBLICATION',
+              label: sPublication,
               icon: Icons.public,
               function: () => Navigator.popAndPushNamed(context, publication),
             ),
             ReuseDrawerListTile(
-              label: 'SOCIAL MEDIA',
+              label: sSocial,
               icon: Icons.perm_media,
               function: () => Navigator.popAndPushNamed(context, socialMedia),
             ),
             ReuseDrawerListTile(
-              label: 'CONTACT US',
+              label: sCon,
               icon: Icons.phone,
               function: () => Navigator.popAndPushNamed(context, contactUs),
             ),
             ReuseDrawerListTile(
-              label: 'ABOUT US',
+              label: sAboutUs,
               function: () => Navigator.popAndPushNamed(context, aboutUs),
               icon: Icons.help,
             ),

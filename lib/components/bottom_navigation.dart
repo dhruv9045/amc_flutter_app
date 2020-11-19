@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:amcflutterapp/resuable/constraints.dart';
+import 'file:///D:/TrueLancer/AMC%20Flutter%20design/amc_flutter_app/lib/assets/constraints.dart';
 import '../constants.dart';
 
 class BottomNavBar extends StatelessWidget{
@@ -20,5 +20,4 @@ class BottomNavBar extends StatelessWidget{
       ),
     );
   }
-
 }

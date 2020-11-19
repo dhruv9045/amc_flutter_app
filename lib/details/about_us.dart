@@ -1,5 +1,6 @@
 import 'package:amcflutterapp/components/bottom_navigation.dart';
 import 'package:amcflutterapp/components/my_drawer.dart';
+import 'file:///D:/TrueLancer/AMC%20Flutter%20design/amc_flutter_app/lib/assets/constraints.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -12,7 +13,7 @@ class AboutUs extends StatelessWidget {
         backgroundColor: Colors.blue[900],
         title: new Center(
           child: new Text(
-            'About Us',
+            sAboutUs,
             textAlign: TextAlign.center,
           ),
         ),
